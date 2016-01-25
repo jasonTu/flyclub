@@ -1,0 +1,13 @@
+/opt/flyclub/log/supervisor/supervisord.log
+/opt/flyclub/log/uwsgi/*.log {
+        daily
+        dateext
+        missingok
+        rotate 30
+        notifempty
+        create 640 flyclub flyclub
+        sharedscripts
+        postrotate
+                [ -f /opt/flyclub/run/supervisord.pid ] && kill -USR2 `cat /opt/flyclub/run/supervisord.pid`
+        endscript
+}

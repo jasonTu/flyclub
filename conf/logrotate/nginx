@@ -1,0 +1,12 @@
+/opt/flyclub/log/nginx/*.log {
+        daily
+        missingok
+        rotate 30
+        dateext
+        notifempty
+        create 640 mbk mbk
+        sharedscripts
+        postrotate
+                [ -f /opt/flyclub/run/nginx.pid ] && kill -USR1 `cat /opt/flyclub/run/nginx.pid`
+        endscript
+}

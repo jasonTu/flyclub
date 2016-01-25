@@ -1,0 +1,13 @@
+/opt/flyclub/log/celery/*.log
+/opt/flyclub/log/supervisor/supervisord-worker.log {
+        daily
+        dateext
+        missingok
+        rotate 30
+        notifempty
+        create 640 flyclub flyclub
+        sharedscripts
+        postrotate
+                [ -f /opt/flyclub/run/supervisord-worker.pid ] && kill -USR2 `cat /opt/flyclub/run/supervisord-worker.pid`
+        endscript
+}
