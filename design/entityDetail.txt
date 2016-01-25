@@ -1,0 +1,53 @@
+# Fly Club
+---
+
+## Entity Detail
+
+### 1.Site
+* name
+* address
+* contact_name
+* contact_cellphone
+
+### 2.Teacher
+* name
+* age
+* sex
+* level
+* graduateSchool
+
+### 3.Student
+* club_id
+* name
+* age
+* sex
+* school
+* profilePic
+
+### 4.StudentContact
+* name
+* relation
+* cellphone
+* student
+
+### 5.Course
+* course_name
+* site
+* teacher
+* trainTime
+* totalClass
+* trainedClass
+* default_price
+
+### 6.StudentCourse
+* student
+* course
+* is_paid
+* is_enabled
+* trainedClass
+* price
+
+### 7.Class
+* course
+* student
+* trainDate
