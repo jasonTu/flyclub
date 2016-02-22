@@ -1,0 +1,7 @@
+# coding: utf-8
+"""Celery configuration module."""
+
+CELERYD_PREFETCH_MULTIPLIER = 1
+CELERY_IGNORE_RESULT = True
+CELERY_ACKS_LATE = True
+CELERY_DISABLE_RATE_LIMITS = True
